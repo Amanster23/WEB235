@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Rollover Images</title>
+	<link href="../mod4 (ch.7)/site.css" rel="stylesheet">
+	<style>
+		#gallery img {
+			display: inline-block;
+			margin: 10px;
+			border: 1px solid rgb(0, 0, 0);
+		}
+	</style>
+	<script src="../mod4 (ch.7)/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$('#gallery img').each(function () {
+				var imgFile = $(this).attr('src');
+				var preloadImage = new Image();
+				var imgExt = /(\.\w{3,4}$)/;
+				preloadImage.src = imgFile.replace(imgExt, '_h$1');
+				$(this).hover(
+					function () {
+						$(this).attr('src', preloadImage.src);
+					},
+					function () {
+						$(this).attr('src', imgFile);
+					}
+				); // end hover
+			}); // end each
+		}); // end ready
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+		</header>
+		<div class="content">
+			<div class="main">
+				<h1>Rollover Images</h1>
+				<p>Mouse over the images below</p>
+				<div id="gallery"> <a href="../mod4 (ch.7)/large/blue.jpg"><img src="../mod4 (ch.7)/small/blue.jpg"
+							width="70" height="70" alt="blue"></a> <a href="../mod4 (ch.7)/large/green.jpg"><img
+							src="../mod4 (ch.7)/small/green.jpg" width="70" height="70" alt="green"></a> <a
+						href="../mod4 (ch.7)/large/orange.jpg"><img src="../mod4 (ch.7)/small/orange.jpg" width="70"
+							height="70" alt="orange"></a> <a href="../mod4 (ch.7)/large/purple.jpg"><img
+							src="../mod4 (ch.7)/small/purple.jpg" width="70" height="70" alt="purple"></a> <a
+						href="../mod4 (ch.7)/large/red.jpg"><img src="../mod4 (ch.7)/small/red.jpg" width="70"
+							height="70" alt="red"></a> <a href="../mod4 (ch.7)/large/yellow.jpg"><img
+							src="../mod4 (ch.7)/small/yellow.jpg" width="70" height="70" alt="yellow"></a></div>
+			</div>
+		</div>
+		<footer>
+			<p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David
+					McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+		</footer>
+	</div>
+</body>
+
+</html>
