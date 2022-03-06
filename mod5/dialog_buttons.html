@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<!--
+	Aman Malik
+	WEB235 - Spring 2022
+	Module 5
+	2/26/2022
+-->
+
+<head>
+	<meta charset="UTF-8">
+	<title>Dialog example</title>
+	<link href="./jquery-ui.min.css" rel="stylesheet">
+	<link href="./site.css" rel="stylesheet">
+	<script src="./jquery.min.js"></script>
+	<script src="./jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#confirm').dialog({
+				modal: true,
+				autoOpen: false
+			});
+			$('#robot').click(function () {
+				$('#confirm').dialog('open');
+			}); // end click
+		}); // end ready
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
+		</header>
+		<div class="content">
+			<div class="main">
+				<h1>Adding buttons to a dialog box</h1>
+				<p>Eeek, a robot! Click on the robot to destroy it.</p>
+				<p><img src="robot.jpg" id="robot"></p>
+				<!-- add dialog here -->
+				<div id="confirm" title="Confirm Destruction">
+					<p>Are you sure you want to destroy the robot?</p>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David
+					McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
+		</footer>
+	</div>
+</body>
+
+</html>
