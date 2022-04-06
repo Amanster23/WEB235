@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+        Aman Malik
+        WEB235 - Spring 2022
+        Module 10
+        4/6/2022
+    -->
+
+<head>
+    <title>Web 235 - Module 10: Vue - conditional, events</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="charcoal.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div class="nav-bar"></div>
+    <div id="app">
+        <div class="product">
+            <div class="product-image">
+                <img v-bind:src="image">
+            </div>
+            <div class="product-info">
+                <h1>{{ product }}</h1>
+                <p v-if="inventory > 10">In Stock</p>
+                <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+                <p v-else>Out of Stock</p>
+                <ul>
+                    <li v-for="detail in details">{{ detail }}</li>
+                </ul>
+                <div v-for="varient in varients" :key="varient.varientId">
+                    <p @mouseover="updateProduct(varient.varientImage)">{{ varient.varientColor }}</p>
+                </div>
+                <button v-on:click="addToCart">Add to Cart</button>
+                <button v-on:click="subFromCart">Remove from Cart</button>
+                <div class="cart">
+                    <p>Cart({{cart}})</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                product: 'Charcoal',
+                image: 'briquettes-charcoal.jpg',
+                inventory: 10,
+                details: ["99% carbon", "Dark grey", "Gender-neutral", "20 pound bag"],
+                varients: [{
+                        varientId: 2234,
+                        varientColor: "Briquettes",
+                        varientImage: 'briquettes-charcoal.jpg'
+                    },
+                    {
+                        varientId: 2235,
+                        varientColor: "Hardwood, Lump",
+                        varientImage: 'lump-charcoal.png'
+                    }
+                ],
+                cart: 0
+            },
+            methods: {
+                updateProduct: function (varientImage) {
+                    this.image = varientImage
+                },
+                addToCart: function () {
+                    this.cart += 1
+                },
+                subFromCart: function () {
+                    if (this.cart > 0) {
+                        this.cart -= 1
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
