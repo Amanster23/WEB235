@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+        Aman Malik
+        WEB235 - Spring 2022
+        Final Project
+        4/9/2022
+    -->
+
+<head>
+    <title>Baseline News</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="finalproject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+</head>
+
+<body>
+    <!-- Header/Slick -->
+    <div class="header">
+        <div class="fade">
+            <div><img src="nba.jpg"></div>
+            <div><img src="logo.png"></div>
+            <div><img src="nba.jpg"></div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+
+    <!-- The flexible grid (content) -->
+    <div class="row">
+        <div class="side">
+            <h2>Top News</h2>
+            <br>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+            <h3>More Text</h3>
+            <br>
+            <br>
+            <p>Lorem ipsum dolor sit ame.</p>
+            <div class="fakeimg" style="height:60px;">Article</div><br>
+            <div class="fakeimg" style="height:60px;">Article</div><br>
+            <div class="fakeimg" style="height:60px;">Article</div>
+        </div>
+        <div class="main">
+            <h2>TITLE HEADING</h2>
+            <h5>Title description</h5>
+            <div class="fakeimg" style="height:200px;"></div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+            <br>
+            <h2>TITLE HEADING</h2>
+            <h5>Title description</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+            <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
+    </script>
+    <script type="text/javascript">
+        $('.fade').slick({
+            respondTo: 'fade',
+            adaptiveHeight: true,
+            infinite: true,
+            speed: 500,
+            fade: true,
+            cssEase: 'linear',
+            arrows: true,
+            prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+            nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+        });
+    </script>
+
+</body>
+
+</html>
