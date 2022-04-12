@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+        Aman Malik
+        WEB235 - Spring 2022
+        Final Project
+        4/9/2022
+    -->
+
+<head>
+    <title>Baseline News</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="finalproject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+</head>
+
+<body>
+     <!-- Header/Slick -->
+     <div class="header">
+        <div class="slider">
+            <img src="nba.jpg">
+            <img src="logo.png">
+            <img src="nba.jpg">
+            <img src="logo.png">
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="scores.html">Scores</a>
+        <div class="dropdown">
+            <button class="dropbtn">Standings 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="standings.html">Eastern Conference</a>
+              <a href="wstandings.html">Western Conference</a>
+            </div>
+          </div> 
+          <a href="stats.html">Stats</a>
+    </div>
+
+    <div class="ptable"> <!--Start of East-->
+        <h1 class="headin">Eastern Conference</h1>
+        <table>
+            <tr class="col">
+                <th>#</th>
+                <th>Team</th>
+                <th>W</th>
+                <th>L</th>
+                <th>PCT</th>
+                <th>GB</th>
+                <th>Home</th>
+                <th>Away</th>
+            </tr>
+            <tr class="wpos">
+                <td>1</td>
+                <td>Miami Heat</td>
+                <td>53</td>
+                <td>28</td>
+                <td>.654</td>
+                <td>-</td>
+                <td>29-12</td>
+                <td>24-16</td>
+            </tr>
+            <tr class="wpos">
+                <td>2</td>
+                <td>Milwaukee Bucks</td>
+                <td>51</td>
+                <td>30</td>
+                <td>.630</td>
+                <td>2</td>
+                <td>27-14</td>
+                <td>24-16</td>
+            </tr>
+            <tr class="wpos">
+                <td>3</td>
+                <td>Boston Celtics</td>
+                <td>50</td>
+                <td>31</td>
+                <td>.617</td>
+                <td>3</td>
+                <td>28-13</td>
+                <td>22-18</td>
+            </tr>
+            <tr class="wpos">
+                <td>4</td>
+                <td>Philadelphia 76ers</td>
+                <td>50</td>
+                <td>31</td>
+                <td>.617</td>
+                <td>3</td>
+                <td>23-17</td>
+                <td>27-14</td>
+            </tr>
+            <tr class="wpos">
+                <td>5</td>
+                <td>Toronto Raptors</td>
+                <td>48</td>
+                <td>33</td>
+                <td>.593</td>
+                <td>5</td>
+                <td>24-17</td>
+                <td>24-16</td>
+            </tr>
+            <tr class="wpos">
+                <td>6</td>
+                <td>Chicago Bulls</td>
+                <td>45</td>
+                <td>36</td>
+                <td>.556</td>
+                <td>8</td>
+                <td>27-14</td>
+                <td>18-22</td>
+            </tr>
+            <tr class="pos">
+                <td>7</td>
+                <td>Brooklyn Nets</td>
+                <td>43</td>
+                <td>38</td>
+                <td>.531</td>
+                <td>10</td>
+                <td>19-21</td>
+                <td>24-17</td>
+            </tr>
+            <tr class="pos">
+                <td>8</td>
+                <td>Cleveland Cavaliers</td>
+                <td>43</td>
+                <td>38</td>
+                <td>.531</td>
+                <td>10</td>
+                <td>24-16</td>
+                <td>19-22</td>
+            </tr>
+            <tr class="pos">
+                <td>9</td>
+                <td>Atlanta Hawks</td>
+                <td>42</td>
+                <td>39</td>
+                <td>.519</td>
+                <td>11</td>
+                <td>27-14</td>
+                <td>15-25</td>
+            </tr>
+            <tr class="pos">
+                <td>10</td>
+                <td>Charlotte Hornets</td>
+                <td>42</td>
+                <td>39</td>
+                <td>.519</td>
+                <td>11</td>
+                <td>21-19</td>
+                <td>21-20</td>
+            </tr>
+            <tr class="xpos">
+                <td>11</td>
+                <td>New York Knicks</td>
+                <td>36</td>
+                <td>45</td>
+                <td>.444</td>
+                <td>17</td>
+                <td>16-24</td>
+                <td>20-21</td>
+            </tr>
+            <tr class="xpos">
+                <td>12</td>
+                <td>Washington Wizards</td>
+                <td>35</td>
+                <td>46</td>
+                <td>.432</td>
+                <td>18</td>
+                <td>21-20</td>
+                <td>14-26</td>
+            <tr class="xpos">
+                <td>13</td>
+                <td>Indiana Pacers</td>
+                <td>25</td>
+                <td>56</td>
+                <td>.309</td>
+                <td>28</td>
+                <td>16-25</td>
+                <td>9-31</td>
+            <tr class="xpos">
+                <td>14</td>
+                <td>Detroit Pistons</td>
+                <td>23</td>
+                <td>58</td>
+                <td>.284</td>
+                <td>30</td>
+                <td>13-28</td>
+                <td>10-30</td>
+            <tr class="xpos">
+                <td>15</td>
+                <td>Orlando Magic</td>
+                <td>21</td>
+                <td>60</td>
+                <td>.259</td>
+                <td>32</td>
+                <td>11-29</td>
+                <td>10-31</td>
+        </table>
+    </div> <!--End of East-->
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slider').slick({
+                arrows: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            })
+        });
+    </script>
+
+</body>
+
+</html>

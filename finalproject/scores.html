@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+        Aman Malik
+        WEB235 - Spring 2022
+        Final Project
+        4/9/2022
+    -->
+
+<head>
+    <title>Baseline News</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="finalproject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+</head>
+
+<body>
+    <!-- Header/Slick -->
+    <div class="header">
+        <div class="slider">
+            <img src="nba.jpg">
+            <img src="logo.png">
+            <img src="nba.jpg">
+            <img src="logo.png">
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="scores.html">Scores</a>
+        <div class="dropdown">
+            <button class="dropbtn">Standings 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="standings.html">Eastern Conference</a>
+              <a href="wstandings.html">Western Conference</a>
+            </div>
+          </div> 
+          <a href="stats.html">Stats</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slider').slick({
+                arrows: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            })
+        });
+    </script>
+
+
+</body>
+
+</html>
