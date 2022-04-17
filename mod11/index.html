@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+        Aman Malik
+        WEB235 - Spring 2022
+        Module 11
+        4/16/2022
+    -->
+
+<head>
+    <title>Web 235 Charcoal</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="charcoal.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div class="nav-bar"></div>
+    <div id="app">
+        <div class="product">
+            <div class="product-image">
+                <img v-bind:src="image">
+            </div>
+            <div class="product-info">
+                <h1>{{ title }}</h1>
+                <p v-if="inventory > 10">In Stock</p>
+                <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out!</p>
+                <p v-else :style="{ 'text-decoration': 'line-through' }">Out of Stock</p>
+                <ul>
+                    <li v-for="detail in details">{{ detail }}</li>
+                </ul>
+                <div v-for="varient in varients" 
+                     :key="varient.varientId"
+                       class="color-box"
+                        :style="{ backgroundColor: varient.varientWebColor }">
+                        <p @mouseover="updateProduct(varient.varientImage)">{{ varient.varientColor }}</p>
+                </div>
+                <button v-on:click="addToCart" 
+                        :disabled="inventory < 1"
+                        :class="{ disabledButton: inventory < 1}">Add to Cart</button>
+                <button v-on:click="subFromCart">Remove from Cart</button>
+                <div class="cart">
+                    <p>Cart({{cart}})</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                product: 'Charcoal',
+                image: 'briquettes-charcoal.jpg',
+                inventory: 0,
+                details: ["99% carbon", "Dark grey", "Gender-neutral", "20 pound bag"],
+                store: 'Web 235',
+                varients: [{
+                        varientId: 2234,
+                        varientColor: "Briquettes",
+                        varientImage: 'briquettes-charcoal.jpg',
+                        varientWebColor: "lightgrey"
+                    },
+                    {
+                        varientId: 2235,
+                        varientColor: "Hardwood, Lump",
+                        varientImage: 'lump-charcoal.png',
+                        varientWebColor: "dimgrey"
+                    }
+                ],
+                cart: 0
+            },
+            methods: {
+                updateProduct: function (varientImage) {
+                    this.image = varientImage
+                },
+                addToCart: function () {
+                    this.cart += 1
+                },
+                subFromCart: function () {
+                    if (this.cart > 0) {
+                        this.cart -= 1
+                    }
+                }
+            },
+            computed: {
+                title() {
+            return this.store + ' ' + this.product
+        }
+}
+        })
+    </script>
+</body>
+
+</html>
