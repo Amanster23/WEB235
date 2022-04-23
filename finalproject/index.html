@@ -39,7 +39,15 @@
                 <a href="wstandings.html">Western Conference</a>
             </div>
         </div>
-        <a href="stats.html">Stats</a>
+        <div class="dropdown">
+            <button class="dropbtn">Stats
+                <i class="fa fa-caret-down">&#8595;</i>
+            </button>
+            <div class="dropdown-content">
+                <a href="stats.html">Player</a>
+                <a href="teamstats.html">Team</a>
+            </div>
+        </div>
     </div>
 
     <!-- The flexible grid (content) -->
@@ -78,12 +86,11 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="left">
-            <p>Copyright 2022</p>
+        <div>
+            <h5>Copyright 2022</h5>
+            <p>| Contact Us | Terms & Conditions |</p>
         </div>
-        <div class="right">
-            <p>Copyright 2022</p>
-        </div>
+      
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -115,23 +122,16 @@
 ]
             })
         });
-        $(document).ready(function () {
-            $("h1").hover(function () {
-                $(this).css("background-color", "yellow");
-            }, function () {
-                $(this).css("background-color", "whitesmoke");
-            });
-        });
 
         $(document).ready(function () {
             $('.growImage').mouseover(function () {
                 $(this).stop().animate({
                     "width": "70%"
-                }, 400, 'swing');
+                }, 600, 'swing');
             }).mouseout(function () {
                 $(this).stop().animate({
                     "width": "50%"
-                }, 200, 'swing');
+                }, 400, 'swing');
             });;
         });
     </script>

@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    color: #4b5250;
 }
 
 /* Style the body */
@@ -155,16 +154,11 @@ img {
 
 /* Footer */
 .footer {
-    padding: 100px;
+    padding: 50px;
     text-align: center;
-    background: #ddd;
+    background: #aaa;
 }
-.left {
-  float: left;
-}
-.right {
-  float: right;
-}
+
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
     .row,
@@ -177,17 +171,21 @@ img {
     .navbar a, .dropdown, .dropdown-content {
       width: 100%;
     }
+    .column {
+      width: 100%;
+    }
 }
 
 /* Standings CSS */
 .ptable table{
 	margin: 30px auto;
-	border-collapse: collapse;
+  border-collapse: collapse;
+  width: 80%;
 }
 
 .ptable{
 	margin: 0px 0% 30px 0%;
-    background-color: black;
+  background-color: black;
 }
 
 th, td {
@@ -250,4 +248,61 @@ table .col{
 }
 .xpos:hover td{
 	color: #000000;
+}
+
+
+/*Stats/Scores CSS*/
+.row {
+  margin-left:-5px;
+  margin-right:-5px;
+}
+  
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+caption {
+  text-decoration: underline;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
+}
+
+span {
+  padding: 0 10px 0 5px;
+  font-size: 12px;
+}
+
+table a {
+  color: #06c;
+  text-decoration: none;
+}
+
+table a:hover {
+  color: blue;
+}
+
+table img {
+  width: 75px;
+  float: left;
 }
