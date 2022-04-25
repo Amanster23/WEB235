@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+        Aman Malik
+        WEB235 - Spring 2022
+        Final Project
+        4/23/2022
+    -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="finalproject.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <title>Baseline News</title>
+</head>
+
+<body>
+    <!-- Header/Slick -->
+    <div class="header">
+        <div class="slider">
+            <img src="mjutah.jpg">
+            <img src="kobeshaq.jpg">
+            <img src="mjdunk.jpg">
+            <img src="rayshot.jpg">
+            <img src="kawhishot.jpg">
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="scores.html">Scores</a>
+        <div class="dropdown">
+            <button class="dropbtn">Standings
+                <i class="fa fa-caret-down">&#8595;</i>
+            </button>
+            <div class="dropdown-content">
+                <a href="standings.html">Eastern Conference</a>
+                <a href="wstandings.html">Western Conference</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Stats
+                <i class="fa fa-caret-down">&#8595;</i>
+            </button>
+            <div class="dropdown-content">
+                <a href="stats.html">Player</a>
+                <a href="teamstats.html">Team</a>
+            </div>
+        </div>
+    </div>
+    <!--Contact Form-->
+    <form id="basic-form" action="" method="post">
+        <p>
+            <label for="name">Name <span>(at least 3 characters)</span></label>
+            <input id="name" name="name" minlength="3" type="text" required>
+        </p>
+        <p>
+            <label for="email">E-mail</label>
+            <input id="email" type="email" name="email" required>
+        </p>
+        <p>
+            <label for="phone">Phone</label>
+            <input id="phone" type="phone" name="phone" required>
+        </p>
+        <p>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input class="submit" type="submit" value="SUBMIT">
+        </p>
+    </form>
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <h5>Copyright 2022</h5>
+            <p>| <a href="contact.html">Contact Us</a> | <a href="terms.html">Terms & Conditions</a> |</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slider').slick({
+                arrows: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+                responsive: [{
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                ]
+            })
+        });
+
+
+        $(document).ready(function () {
+            $("#basic-form").validate();
+        });
+    </script>
+</body>
+
+</html>
