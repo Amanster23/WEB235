@@ -8,93 +8,108 @@
     -->
 
 <head>
-    <title>Baseline News</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="finalproject.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+  <title>Baseline News</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="finalproject.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
+  </script>
+
 </head>
 
 <body>
-    <!-- Header/Slick -->
-    <div class="header">
-        <div class="slider">
-            <img src="mjutah.jpg">
-            <img src="kobeshaq.jpg">
-            <img src="mjdunk.jpg">
-            <img src="rayshot.jpg">
-            <img src="kawhishot.jpg">
-        </div>
+  <!-- Header/Slick -->
+  <div class="header">
+    <div class="slider">
+      <img class="mjutah" src="mjutah.jpg" alt="MJ Utah Shot">
+      <img class="kobeshaq" src="kobeshaq.jpg" alt="Kobe Shaq Win">
+      <img class="mjdunk" src="mjdunk.jpg" alt="MJ Dunk">
+      <img class="rayshot" src="rayshot.jpg" alt="Ray Shot">
+      <img class="kawhishot" src="kawhishot.jpg" alt="Kawhi Shot">
     </div>
+  </div>
 
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="scores.html">Scores</a>
-        <div class="dropdown">
-            <button class="dropbtn">Standings 
-              <i class="fa fa-caret-down">&#8595;</i>
-            </button>
-            <div class="dropdown-content">
-              <a href="standings.html">Eastern Conference</a>
-              <a href="wstandings.html">Western Conference</a>
-            </div>
-          </div> 
-          <div class="dropdown">
-            <button class="dropbtn">Stats
-                <i class="fa fa-caret-down">&#8595;</i>
-            </button>
-            <div class="dropdown-content">
-                <a href="stats.html">Player</a>
-                <a href="teamstats.html">Team</a>
-            </div>
-        </div>
-    </div>
-    <!--Content-->
-    <div class="wrapper">
-     
-        
-        
-    </div>
-    <!-- Footer -->
-    <footer class="footer">
-      <div>
-          <h5>Copyright 2022</h5>
-          <p>| <a href="contact.html">Contact Us</a> | <a href="terms.html">Terms & Conditions</a> |</p>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="scores.html">Scores</a>
+    <div class="dropdown">
+      <button class="dropbtn">Standings
+        <i class="fa fa-caret-down">&#8595;</i>
+      </button>
+      <div class="dropdown-content">
+        <a href="standings.html">Eastern Conference</a>
+        <a href="wstandings.html">Western Conference</a>
       </div>
-  </footer>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Stats
+        <i class="fa fa-caret-down">&#8595;</i>
+      </button>
+      <div class="dropdown-content">
+        <a href="stats.html">Player</a>
+        <a href="teamstats.html">Team</a>
+      </div>
+    </div>
+  </div>
+  <!--Content-->
+  <div class="wrapper">
+    <section class="scoreboard">
+      <div class="main">
+        <div>
+          <h1 class="headline">NBA Scoreboard</h1>
+        </div>
+        <section>
+          <div class="scores">
+            <header>
+              <h3>Sunday, May 8, 2022 <span class="next"><a href="scores2.html">&#10148;</a></span></h3>
+            </header>
+          </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
-    </script>
-    <script type="text/javascript">
-          $(document).ready(function () {
-            $('.slider').slick({
-                arrows: false,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1500,
-                responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-]
-            })
-        });
-    </script>
+          <div>
+            <div>
+              <table class="inner">
+                <tr>
+                  <th><img src="phx.png" alt="Suns"></th>
+                  <th>Phoenix Suns (64-18)</th>
+                  <th>2:30pm <br> ESPN</th>
+                </tr>
+                <tr>
+                  <th><img src="dal.png" alt="Dallas"></th>
+                  <th>Dallas Mavericks (52-30)</th>
+                  <th>Game 4 <br> PHX leads 2-1</th>
+                </tr>
+              </table>
+            </div>
+            <br>
+            <div>
+              <table class="inner">
+                <tr>
+                  <th><img src="mia.png" alt="Heat"></th>
+                  <th>Miami Heat (53-29)</th>
+                  <th>7:00pm<br>TNT</th>
+                </tr>
+                <tr>
+                  <th><img src="phi.png" alt="76ers"></th>
+                  <th>Philadelphia 76ers (51-31)</th>
+                  <th>Game 4 <br> MIA leads 2-1</th>
+                </tr>
+              </table>
+            </div>
 
+          </div>
+          <!-- Footer -->
+          <footer class="footer">
+            <div id="vue">
+              <p>| <a href="contact.html">Contact Us</a> |</p>
+              {{ footerInfo }}
+            </div>
+          </footer>
+
+          <script src="finalproject.js"></script>
 
 </body>
 

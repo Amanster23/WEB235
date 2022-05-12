@@ -13,17 +13,22 @@
     <link rel="stylesheet" href="finalproject.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
+    </script>
 </head>
 
 <body>
     <!-- Header/Slick -->
     <div class="header">
         <div class="slider">
-            <img src="mjutah.jpg">
-            <img src="kobeshaq.jpg">
-            <img src="mjdunk.jpg">
-            <img src="rayshot.jpg">
-            <img src="kawhishot.jpg">
+            <img class="mjutah" src="mjutah.jpg" alt="MJ Utah Shot">
+            <img class="kobeshaq" src="kobeshaq.jpg" alt="Kobe Shaq Win">
+            <img class="mjdunk" src="mjdunk.jpg" alt="MJ Dunk">
+            <img class="rayshot" src="rayshot.jpg" alt="Ray Shot">
+            <img class="kawhishot" src="kawhishot.jpg" alt="Kawhi Shot">
         </div>
     </div>
 
@@ -32,15 +37,15 @@
         <a href="index.html">Home</a>
         <a href="scores.html">Scores</a>
         <div class="dropdown">
-            <button class="dropbtn">Standings 
-              <i class="fa fa-caret-down">&#8595;</i>
+            <button class="dropbtn">Standings
+                <i class="fa fa-caret-down">&#8595;</i>
             </button>
             <div class="dropdown-content">
-              <a href="standings.html">Eastern Conference</a>
-              <a href="wstandings.html">Western Conference</a>
+                <a href="standings.html">Eastern Conference</a>
+                <a href="wstandings.html">Western Conference</a>
             </div>
-          </div> 
-          <div class="dropdown">
+        </div>
+        <div class="dropdown">
             <button class="dropbtn">Stats
                 <i class="fa fa-caret-down">&#8595;</i>
             </button>
@@ -51,7 +56,8 @@
         </div>
     </div>
 
-    <div class="ptable"> <!--Start of West-->
+    <div class="ptable">
+        <!--Start of West-->
         <h1 class="headin">Western Conference</h1>
         <table>
             <tr class="col">
@@ -66,7 +72,7 @@
             </tr>
             <tr class="wpos">
                 <td>1</td>
-                <td><img src="phx.png"><br><br>Phoenix Suns</td>
+                <td><img src="phx.png" alt="Suns"><br><br>Phoenix Suns</td>
                 <td>64</td>
                 <td>18</td>
                 <td>.780</td>
@@ -76,7 +82,7 @@
             </tr>
             <tr class="wpos">
                 <td>2</td>
-                <td><img src="mem.png"><br><br>Memphis Grizzlies</td>
+                <td><img src="mem.png" alt="Grizzlies"><br><br>Memphis Grizzlies</td>
                 <td>56</td>
                 <td>26</td>
                 <td>.683</td>
@@ -86,7 +92,7 @@
             </tr>
             <tr class="wpos">
                 <td>3</td>
-                <td><img src="gs.png"><br><br>Golden State Warriors</td>
+                <td><img src="gs.png" alt="Warriors"><br><br>Golden State Warriors</td>
                 <td>53</td>
                 <td>29</td>
                 <td>.646</td>
@@ -96,7 +102,7 @@
             </tr>
             <tr class="wpos">
                 <td>4</td>
-                <td><img src="dal.png"><br><br>Dallas Mavericks</td>
+                <td><img src="dal.png" alt="Dallas"><br><br>Dallas Mavericks</td>
                 <td>52</td>
                 <td>30</td>
                 <td>.634</td>
@@ -106,7 +112,7 @@
             </tr>
             <tr class="wpos">
                 <td>5</td>
-                <td><img src="utah.png"><br><br>Utah Jazz</td>
+                <td><img src="utah.png" alt="Jazz"><br><br>Utah Jazz</td>
                 <td>49</td>
                 <td>33</td>
                 <td>.598</td>
@@ -116,7 +122,7 @@
             </tr>
             <tr class="wpos">
                 <td>6</td>
-                <td><img src="den.png"><br><br>Denver Nuggets</td>
+                <td><img src="den.png" alt="Nuggets"><br><br>Denver Nuggets</td>
                 <td>48</td>
                 <td>34</td>
                 <td>.585</td>
@@ -126,7 +132,7 @@
             </tr>
             <tr class="pos">
                 <td>7</td>
-                <td><img src="min.png"><br><br>Minnesota Timberwolves</td>
+                <td><img src="min.png" alt="Timberwolves"><br><br>Minnesota Timberwolves</td>
                 <td>46</td>
                 <td>36</td>
                 <td>.561</td>
@@ -136,7 +142,7 @@
             </tr>
             <tr class="pos">
                 <td>8</td>
-                <td><img src="lac.png"><br><br>LA Clippers</td>
+                <td><img src="lac.png" alt="Clippers"><br><br>LA Clippers</td>
                 <td>42</td>
                 <td>40</td>
                 <td>.512</td>
@@ -146,7 +152,7 @@
             </tr>
             <tr class="pos">
                 <td>9</td>
-                <td><img src="nop.png"><br><br>New Orleans Pelicans</td>
+                <td><img src="nop.png" alt="Pelicans"><br><br>New Orleans Pelicans</td>
                 <td>36</td>
                 <td>46</td>
                 <td>.439</td>
@@ -156,7 +162,7 @@
             </tr>
             <tr class="pos">
                 <td>10</td>
-                <td><img src="sas.png"><br><br>San Antonio Spurs</td>
+                <td><img src="sas.png" alt="Spurs"><br><br>San Antonio Spurs</td>
                 <td>34</td>
                 <td>48</td>
                 <td>.415</td>
@@ -166,7 +172,7 @@
             </tr>
             <tr class="xpos">
                 <td>11</td>
-                <td><img src="lal.png"><br><br>Los Angeles Lakers</td>
+                <td><img src="lal.png" alt="Lakers"><br><br>Los Angeles Lakers</td>
                 <td>33</td>
                 <td>49</td>
                 <td>.401</td>
@@ -176,7 +182,7 @@
             </tr>
             <tr class="xpos">
                 <td>12</td>
-                <td><img src="sac.png"><br><br>Sacramento Kings</td>
+                <td><img src="sac.png" alt="Kings"><br><br>Sacramento Kings</td>
                 <td>30</td>
                 <td>52</td>
                 <td>.366</td>
@@ -185,7 +191,7 @@
                 <td>14-27</td>
             <tr class="xpos">
                 <td>13</td>
-                <td><img src="port.png"><br><br>Portland Trail Blazers</td>
+                <td><img src="port.png" alt="Blazers"><br><br>Portland Trail Blazers</td>
                 <td>27</td>
                 <td>55</td>
                 <td>.329</td>
@@ -194,7 +200,7 @@
                 <td>10-31</td>
             <tr class="xpos">
                 <td>14</td>
-                <td><img src="okc.png"><br><br>Oklahoma City Thunder</td>
+                <td><img src="okc.png" alt="Thunder"><br><br>Oklahoma City Thunder</td>
                 <td>24</td>
                 <td>58</td>
                 <td>.293</td>
@@ -203,7 +209,7 @@
                 <td>12-29</td>
             <tr class="xpos">
                 <td>15</td>
-                <td><img src="hou.png"><br><br>Houston Rockets</td>
+                <td><img src="hou.png" alt="Rockets"><br><br>Houston Rockets</td>
                 <td>20</td>
                 <td>62</td>
                 <td>.244</td>
@@ -211,47 +217,18 @@
                 <td>11-30</td>
                 <td>9-32</td>
         </table>
-    </div> <!--End of West-->
+    </div>
+    <!--End of West-->
 
     <!-- Footer -->
     <footer class="footer">
-        <div>
-            <h5>Copyright 2022</h5>
-            <p>| <a href="contact.html">Contact Us</a> | <a href="terms.html">Terms & Conditions</a> |</p>
+        <div id="vue">
+            <p>| <a href="contact.html">Contact Us</a> |</p>
+            {{ footerInfo }}
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
-    </script>
-    <script type="text/javascript">
-          $(document).ready(function () {
-            $('.slider').slick({
-                arrows: false,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1500,
-                responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-]
-            })
-        });
-    </script>
+    <script src="finalproject.js"></script>
 
 </body>
 

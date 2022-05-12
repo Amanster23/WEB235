@@ -12,17 +12,22 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="finalproject.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
+    </script>
 </head>
 
 <body>
     <!-- Header/Slick -->
     <div class="header">
         <div class="slider">
-            <img src="mjutah.jpg">
-            <img src="kobeshaq.jpg">
-            <img src="mjdunk.jpg">
-            <img src="rayshot.jpg">
-            <img src="kawhishot.jpg">
+            <img class="mjutah" src="mjutah.jpg" alt="MJ Utah Shot">
+            <img class="kobeshaq" src="kobeshaq.jpg" alt="Kobe Shaq Win">
+            <img class="mjdunk" src="mjdunk.jpg" alt="MJ Dunk">
+            <img class="rayshot" src="rayshot.jpg" alt="Ray Shot">
+            <img class="kawhishot" src="kawhishot.jpg" alt="Kawhi Shot">
         </div>
     </div>
 
@@ -68,7 +73,7 @@
         <div class="main">
             <h2>Nets vs. Celtics</h2>
             <h5>2022 Playoffs - Eastern Conference First Round</h5>
-            <div><img class="growImage" src="i.jpg"></div>
+            <div><img class="growImage" src="i.jpg" alt="CelticsvsNets"></div>
             <h1>Can the Celtics keep the momentum going after a thriller Game 1?</h1>
             <p>Jayson Tatum made a layup at the buzzer on a pass from Marcus Smart to give the Boston Celtics a dramatic
                 115-114 victory over the Brooklyn Nets on Sunday in Game 1 of their first-round playoff series.</p>
@@ -76,7 +81,7 @@
             <hr>
             <h2>Suns vs. Pelicans</h2>
             <h5>2022 Playoffs - Western Conference First Round</h5>
-            <div><img class="growImage" src="o.jpg"></div>
+            <div><img class="growImage" src="o.jpg" alt="SunsvsPelicans"></div>
             <h1>How much trouble is Phoenix in without Devin Booker?</h1>
             <p>A day after Booker left Phoenix's Game 2 loss to the New Orleans Pelicans in the third quarter, ESPN's
                 Adrian Wojnarowski reported Wednesday that Booker is unlikely to play in either Game 3 or 4 in New
@@ -86,55 +91,13 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div>
-            <h5>Copyright 2022</h5>
-            <p>| <a href="contact.html">Contact Us</a> | <a href="terms.html">Terms & Conditions</a> |</p>
+        <div id="vue">
+            <p>| <a href="contact.html">Contact Us</a> |</p>
+            {{ footerInfo }}
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.slider').slick({
-                arrows: false,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1500,
-                responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    },
-]
-            })
-        });
 
-        $(document).ready(function () {
-            $('.growImage').mouseover(function () {
-                $(this).stop().animate({
-                    "width": "70%"
-                }, 600, 'swing');
-            }).mouseout(function () {
-                $(this).stop().animate({
-                    "width": "50%"
-                }, 400, 'swing');
-            });;
-        });
-    </script>
-
+    <script src="finalproject.js"></script>
 
 </body>
 

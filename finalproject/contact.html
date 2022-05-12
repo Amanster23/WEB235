@@ -13,6 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="finalproject.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
+    </script>
     <title>Baseline News</title>
 </head>
 
@@ -20,11 +26,11 @@
     <!-- Header/Slick -->
     <div class="header">
         <div class="slider">
-            <img src="mjutah.jpg">
-            <img src="kobeshaq.jpg">
-            <img src="mjdunk.jpg">
-            <img src="rayshot.jpg">
-            <img src="kawhishot.jpg">
+            <img class="mjutah" src="mjutah.jpg" alt="MJ Utah Shot">
+            <img class="kobeshaq" src="kobeshaq.jpg" alt="Kobe Shaq Win">
+            <img class="mjdunk" src="mjdunk.jpg" alt="MJ Dunk">
+            <img class="rayshot" src="rayshot.jpg" alt="Ray Shot">
+            <img class="kawhishot" src="kawhishot.jpg" alt="Kawhi Shot">
         </div>
     </div>
 
@@ -75,48 +81,14 @@
     </form>
     <!-- Footer -->
     <footer class="footer">
-        <div>
-            <h5>Copyright 2022</h5>
-            <p>| <a href="contact.html">Contact Us</a> | <a href="terms.html">Terms & Conditions</a> |</p>
+        <div id="vue">
+            <p>| <a href="contact.html">Contact Us</a> |</p>
+            {{ footerInfo }}
         </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
-    </script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.slider').slick({
-                arrows: false,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1500,
-                responsive: [{
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    },
-                ]
-            })
-        });
+    <script src="finalproject.js"></script>
 
-
-        $(document).ready(function () {
-            $("#basic-form").validate();
-        });
-    </script>
 </body>
 
 </html>

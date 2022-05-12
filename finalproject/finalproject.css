@@ -26,9 +26,19 @@ display: block;
     color: white;
 }
 
+.logo {
+  padding: 50px;
+}
+
 .slider {
     position: relative;
 }
+
+.slider img {
+  width: 200px;
+  height: 300px;
+}
+
 .slider .prev_arrow{
     width: 50px;
     height: 50px;
@@ -69,6 +79,11 @@ display: block;
     width: 20%;
   }
   
+  .navbar .active {
+    background-color: gray;
+    text-decoration: underline;
+  }
+
   .dropdown {
     overflow: hidden;
     width: 20%;
@@ -154,9 +169,19 @@ img {
 
 /* Footer */
 .footer {
+    width: 100%;
     padding: 50px;
     text-align: center;
     background: #aaa;
+}
+
+p a {
+    text-decoration: underline;
+    color: black;
+}
+
+p a:hover {
+    color: white;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -349,4 +374,18 @@ input.error {
     border: 1px dashed red;
     font-weight: 300;
     color: red;
+}
+
+/* Scores CSS */
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.next {
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px;
 }
