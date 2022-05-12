@@ -18,6 +18,11 @@ margin: 0 auto;
 display: block;
 }
 
+.logoImage {
+  border: 1px black solid;
+  border-radius: 50%;
+}
+
 /* Header/logo Title */
 .header {
     padding: 60px;
@@ -28,6 +33,15 @@ display: block;
 
 .logo {
   padding: 50px;
+}
+
+.logoHeader {
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+.articles {
+  text-decoration: underline;
 }
 
 .slider {
