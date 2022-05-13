@@ -43,6 +43,15 @@ $(function () {
     });
 });
 
+// Article Animation
+$(document).ready(function () {
+    $(".articleImage").mouseover(function() {
+         $(this).animate({'height':'120px', 'width': '105%'})
+     });
+     $(".articleImage").mouseout(function() {
+        $(this).animate({'height':'100px', 'width': '100%'})
+    });
+});
 
 // Table Highlight
 $(document).ready(function () {

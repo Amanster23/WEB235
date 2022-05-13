@@ -42,6 +42,7 @@ display: block;
 
 .articles {
   text-decoration: underline;
+  font-weight: bold;
 }
 
 .slider {
@@ -148,10 +149,9 @@ display: block;
 .row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     background-color: whitesmoke;
 }
+
 
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
@@ -174,6 +174,12 @@ h1 {
 img {
   width: fit-content;
 }
+
+.articleImage {
+  height: 100px;
+  width: 100%;
+}
+
 /* Fake image, just for this example */
 .fakeimg {
     background-color: #aaa;
